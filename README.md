@@ -4,8 +4,8 @@ A simple health check for [Supervisor](http://supervisord.org/), uses [XML-RPC A
 
 ## Configuration
 
-- `HOST` - Supervisor host
-- `PORT` - Supervisor port
+- `SUPERVISOR_HOST` - Supervisor host
+- `SUPERVISOR_HOST` - Supervisor port
 
 ## Endpoints
 

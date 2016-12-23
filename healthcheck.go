@@ -40,7 +40,7 @@ type SupervisorProcessInfo struct {
 }
 
 func SupervisorUrl() *url.URL {
-	endpoint, err := url.ParseRequestURI(fmt.Sprintf("http://%s:%s", os.Getenv("HOST"), os.Getenv("PORT")))
+	endpoint, err := url.ParseRequestURI(fmt.Sprintf("http://%s:%s", os.Getenv("SUPERVISOR_HOST"), os.Getenv("SUPERVISOR_PORT")))
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -92,7 +92,7 @@ func main() {
 		} else {
 			var failed []string
 			for _, v := range processes {
-				if v.State == 2 || v.StateName == "FATAL" {
+				if v.State == 200 || v.StateName == "FATAL" {
 					failed = append(failed, v.Name)
 				}
 			}
