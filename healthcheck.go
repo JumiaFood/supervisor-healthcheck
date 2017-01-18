@@ -92,7 +92,7 @@ func main() {
 		} else {
 			var failed []string
 			for _, v := range processes {
-				if v.State == 200 || v.StateName == "FATAL" {
+				if v.State == 200 || v.State == 30 {
 					failed = append(failed, v.Name)
 				}
 			}
